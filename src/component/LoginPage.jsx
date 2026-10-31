@@ -1,8 +1,14 @@
+import { useState } from "react";
+
+
 function LoginPage() {
+    const[email, setEmail] = useState("");
+    const[password, setPassword] = useState("")
+
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
 
-      <div className="bg-white p-8 rounded-xl shadow-lg w-{400px}">
+      <div className="bg-white p-8 rounded-xl shadow-lg w-[400px]">
 
 
 
@@ -26,6 +32,8 @@ function LoginPage() {
           </label>
           <input
             type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             placeholder="Enter your email"
             className="w-full p-3 border rounded-lg  mb-4 outline-none focus:ring-2 focus:ring-blue-500"
 
