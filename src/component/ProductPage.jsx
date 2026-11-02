@@ -1,10 +1,10 @@
+import { useNavigate } from "react-router-dom";
+import products from "../data/products";
+
 function ProductPage() {
 
-    const products = [
-        { id: 1, name: "Keyboard", price: 800 },
-        { id: 2, name: "Mouse", price: 500 },
-        { id: 3, name: "Headphone", price: 1200 }
-    ];
+    
+    const navigate = useNavigate();
 
     return (
 
@@ -34,7 +34,7 @@ function ProductPage() {
                         </p>
 
                         <button
-                        onClick={() => console.log(product.id)}
+                        onClick={() => navigate(`/product/${product.id}`)}
                          className="bg-blue-600 text-white px-4 py-2 rounded mt-3">
                             View Details
                         </button>
